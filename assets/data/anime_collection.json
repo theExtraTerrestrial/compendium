@@ -1,0 +1,418 @@
+{
+    "data": {
+        "MediaListCollection": {
+            "lists": [
+                {
+                    "name": "Planning",
+                    "entries": [
+                        {
+                            "media": {
+                                "id": 116589,
+                                "title": {
+                                    "english": "86 EIGHTY-SIX"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116589-qT34qzsZtk9V.jpg",
+                                    "color": "#bbd6f1"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/116589-SqwYWzaZCdD5.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Mecha",
+                                    "Sci-Fi"
+                                ],
+                                "meanScore": 82
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 6547,
+                                "title": {
+                                    "english": "Angel Beats!"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6547-SYexAn5aFyss.png",
+                                    "color": "#5d78f1"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/6547-YUUiSjKyxxeQ.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Comedy",
+                                    "Drama",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 77
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 9919,
+                                "title": {
+                                    "english": "Blue Exorcist"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9919-nXS7JOZrWHfS.jpg",
+                                    "color": "#aed6f1"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/9919-S5idQm3GbZ80.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Fantasy",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 72
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 5081,
+                                "title": {
+                                    "english": "Bakemonogatari"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5081-9GocceQ5Z865.jpg",
+                                    "color": "#4393e4"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n5081-0Zcn5GOFYHMc.jpg",
+                                "genres": [
+                                    "Comedy",
+                                    "Drama",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Romance",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 82
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 107660,
+                                "title": {
+                                    "english": "BEASTARS"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx107660-hgknnyaLchJW.png",
+                                    "color": "#e4a15d"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/107660-AxwrzHkXzYYN.jpg",
+                                "genres": [
+                                    "Drama",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Romance",
+                                    "Slice of Life"
+                                ],
+                                "meanScore": 77
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 159322,
+                                "title": {
+                                    "english": "BLEACH: Thousand-Year Blood War - The Separation"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159322-Sp1GflRhE6Po.jpg",
+                                    "color": "#4386e4"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/159322-biJjvtNkhkxR.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 86
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 169755,
+                                "title": {
+                                    "english": "BLEACH: Thousand-Year Blood War - The Conflict"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx169755-Rqb7MjnzdTc6.jpg",
+                                    "color": null
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/169755-hCWjp9ajjMYV.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 86
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 21311,
+                                "title": {
+                                    "english": "Bungo Stray Dogs"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21311-hAXyT8Yoh6G9.jpg",
+                                    "color": "#e4bb50"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21311-oVJYXoU38Lm5.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Comedy",
+                                    "Mystery",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 77
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 20931,
+                                "title": {
+                                    "english": "Death Parade"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20931-bktYqOcxPERi.jpg",
+                                    "color": "#35a1f1"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20931-xDhiTPZmtS3u.jpg",
+                                "genres": [
+                                    "Drama",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Supernatural",
+                                    "Thriller"
+                                ],
+                                "meanScore": 80
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 105228,
+                                "title": {
+                                    "english": "Dorohedoro"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105228-I4xr84QS9Pvk.jpg",
+                                    "color": "#6b431a"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/105228-QBAya2q8SP52.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Comedy",
+                                    "Fantasy",
+                                    "Horror",
+                                    "Mystery"
+                                ],
+                                "meanScore": 79
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 101347,
+                                "title": {
+                                    "english": "Dororo"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101347-TGaDwEYqLfm1.jpg",
+                                    "color": "#d6bb6b"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n101347-tHurKfTlhtFl.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Drama",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 81
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 20920,
+                                "title": {
+                                    "english": "Is It Wrong to Try to Pick Up Girls in a Dungeon?"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20920-MTREwZOG4BAD.jpg",
+                                    "color": "#aee4d6"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20920-QZeO1gVTQSUZ.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Comedy",
+                                    "Fantasy",
+                                    "Romance"
+                                ],
+                                "meanScore": 73
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 6746,
+                                "title": {
+                                    "english": "Durarara!!"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6746-3LTwM95Uqeoa.png",
+                                    "color": "#e4d6ae"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/6746-84oNA7P9pboV.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Mystery",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 79
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 790,
+                                "title": {
+                                    "english": "Ergo Proxy"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx790-YTUCvBKX8ZWK.jpg",
+                                    "color": null
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/790.jpg",
+                                "genres": [
+                                    "Adventure",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Sci-Fi"
+                                ],
+                                "meanScore": 76
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 21719,
+                                "title": {
+                                    "english": "Fate/stay night [Heaven’s Feel] III. spring song"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21719-MSdTlkno0Z0u.jpg",
+                                    "color": "#e435c9"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21719-5HkmNCw4YhpP.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Fantasy",
+                                    "Psychological",
+                                    "Supernatural",
+                                    "Thriller"
+                                ],
+                                "meanScore": 85
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 11741,
+                                "title": {
+                                    "english": "Fate/Zero Season 2"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11741-oEy1fJHYm2zJ.jpg",
+                                    "color": "#e4781a"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11741-TWwZCgsK5aXh.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Fantasy",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 85
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 227,
+                                "title": {
+                                    "english": "FLCL"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx227-qOB9ZhVvNnqO.jpg",
+                                    "color": "#e4865d"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/227.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Comedy",
+                                    "Mecha",
+                                    "Sci-Fi"
+                                ],
+                                "meanScore": 78
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 5114,
+                                "title": {
+                                    "english": "Fullmetal Alchemist: Brotherhood"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-nSWCgQlmOMtj.jpg",
+                                    "color": "#e4c993"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/5114-q0V5URebphSG.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Drama",
+                                    "Fantasy"
+                                ],
+                                "meanScore": 90
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 239,
+                                "title": {
+                                    "english": "Gankutsuou: The Count of Monte Cristo"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx239-eldiiZxky1Ul.png",
+                                    "color": "#e48643"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/239-QZ7bh97wgpMn.jpg",
+                                "genres": [
+                                    "Drama",
+                                    "Mystery",
+                                    "Sci-Fi",
+                                    "Supernatural",
+                                    "Thriller"
+                                ],
+                                "meanScore": 79
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 777,
+                                "title": {
+                                    "english": "Hellsing Ultimate"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx777-F6547pSAR2Zd.jpg",
+                                    "color": "#e4431a"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/777-XzPjBZdSRtDT.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Horror",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 81
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

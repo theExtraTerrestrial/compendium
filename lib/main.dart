@@ -1,4 +1,5 @@
-import 'package:compendium/core/viewmodels/home_viewmodel.dart';
+import 'dart:ui';
+import 'package:compendium/features/home/viewmodels/home_viewmodel.dart';
 import 'package:compendium/themes/anime_academy_theme.dart';
 import 'package:compendium/routes/app_router.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,14 @@ class MainApp extends StatelessWidget {
         theme: AnimeAcademyTheme.lightTheme,
         darkTheme: AnimeAcademyTheme.darkTheme,
         themeMode: ThemeMode.system,
+        scrollBehavior: const MaterialScrollBehavior().copyWith(
+          dragDevices: {
+            PointerDeviceKind.mouse,
+            PointerDeviceKind.touch,
+            PointerDeviceKind.stylus,
+            PointerDeviceKind.unknown,
+          },
+        ),
       ),
     );
   }
