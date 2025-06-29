@@ -27,7 +27,7 @@ final GoRouter appRouter = GoRouter(
   errorBuilder: (context, state) => _errorPageBuilder(context, state),
 );
 
-List<GoRoute> _featureRoutes = [
+final List<GoRoute> _featureRoutes = [
   GoRoute(
     path: 'project/:id',
     name: 'project_detail',
@@ -35,6 +35,16 @@ List<GoRoute> _featureRoutes = [
       final projectId = state.pathParameters['id']!;
       return ProjectDetailView(projectId: projectId);
     },
+    routes: <GoRoute>[
+      GoRoute(
+        path: 'start',
+        name: 'project_start',
+        builder: (context, state) {
+          final projectId = state.pathParameters['id']!;
+          return _findProjectById(context, projectId);
+        },
+      )
+    ]
   ),
 
   // ==========================================
@@ -47,41 +57,8 @@ List<GoRoute> _featureRoutes = [
     builder: (context, state) => ChangeNotifierProvider(
       create: (context) => AnimeCollectionViewModel(),
       child: const AnimeCollectionView(),
-    ),
-    routes: [
-      // Anime details view
-      GoRoute(
-        path: 'details/:animeId',
-        name: 'anime_collection_details',
-        builder: (context, state) {
-          final animeId = state.pathParameters['animeId']!;
-          // TODO: Replace with AnimeDetailsView when implemented
-          return ProjectDetailView(projectId: animeId);
-        },
-      ),
-
-      // Add new anime
-      GoRoute(
-        path: 'add',
-        name: 'anime_collection_add',
-        builder: (context, state) {
-          // TODO: Replace with AddAnimeView when implemented
-          return const ProjectDetailView(projectId: 'add-anime');
-        },
-      ),
-
-      // Search anime
-      GoRoute(
-        path: 'search',
-        name: 'anime_collection_search',
-        builder: (context, state) {
-          // TODO: Replace with AnimeSearchView when implemented
-          return const ProjectDetailView(projectId: 'search-anime');
-        },
-      ),
-    ],
+    )
   ),
-
 
   // ==========================================
   // FUTURE FEATURE ROUTES
@@ -116,6 +93,21 @@ List<GoRoute> _featureRoutes = [
   // GoRoute(path: '/character-encyclopedia', name: 'character_encyclopedia', ...)
 
 ];
+
+Widget _findProjectById(BuildContext context, String id) {
+  switch (id) {
+    case '1':
+      return ChangeNotifierProvider(
+        create: (context) => AnimeCollectionViewModel(),
+        child: const AnimeCollectionView(),
+      );
+    default:
+      return Scaffold(
+        appBar: AppBar(title: const Text('Project Not Found')),
+        body: const Center(child: Text('Project not found')),
+      );
+  }
+}
 
 /// Global error page builder
 Widget _errorPageBuilder(BuildContext context, GoRouterState state) {

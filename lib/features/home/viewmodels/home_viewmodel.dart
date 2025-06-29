@@ -24,7 +24,7 @@ class HomeViewModel extends ChangeNotifier {
     try {
       _projects = [
         ProjectModel(id: '1', title: 'Static Anime Collection Display', status: ProjectStatus.completed, coverImagePath: 'assets/images/anime_collection.png', description: 'Display 20 hardcoded anime entries in a responsive grid layout\nEach card must show: title, cover image, genre, rating (1-10)\nImplement smooth scrolling with proper spacing\nCreate custom app bar with "My Anime Collection" title\nApply consistent card styling (rounded corners, shadows)\nEnsure responsive design for multiple screen sizes'),
-        ProjectModel(id: '2', title: 'Anime Rating System', status: ProjectStatus.locked),
+        ProjectModel(id: '2', title: 'Anime Rating System', status: ProjectStatus.inProgress),
         ProjectModel(id: '3', title: 'Daily Anime Quote Generator', status: ProjectStatus.locked),
         ProjectModel(id: '4', title: 'Movie Watchlist Manager', status: ProjectStatus.locked),
         ProjectModel(id: '5', title: 'TV Show Episode Tracker', status: ProjectStatus.locked),

@@ -9,6 +9,10 @@ class NavigationService {
     context.goNamed('project_detail', pathParameters: {'id': projectId});
   }
 
+  static void navigateToProjectStart(BuildContext context, String projectId) {
+    context.goNamed('project_start', pathParameters: {'id': projectId});
+  }
+
   // Navigation to specific project features
   static void navigateToAnimeCollection(BuildContext context) {
     context.goNamed('anime_collection');

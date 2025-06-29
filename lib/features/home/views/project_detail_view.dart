@@ -45,7 +45,7 @@ class _ProjectDetailViewState extends State<ProjectDetailView>
   }
 
   Widget _buildProjectDescription(BuildContext context, ProjectModel project) {
-    List<String> descriptionLines = project.description?.split('\n') ?? [];
+    List<String> descriptionLines = project.description?.split('\n') ?? ['No description available'];
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -195,7 +195,7 @@ class _ProjectDetailViewState extends State<ProjectDetailView>
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text('Starting ${project.title}...')),
                       );
-                      NavigationService.navigateToAnimeCollection(context);
+                      NavigationService.navigateToProjectStart(context, project.id);
                     },
                     child: Text('Start Project'),
                   ),
