@@ -43,3 +43,22 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# CocoaPods
+# Ignore Podfile.lock and Pods directory
+ios/Podfile.lock
+ios/Pods/
+macos/Podfile.lock
+macos/Pods/
+
+# CocoaPods generated xcconfig files
+ios/Flutter/Debug.xcconfig
+ios/Flutter/Release.xcconfig
+macos/Flutter/Flutter-Debug.xcconfig
+macos/Flutter/Flutter-Release.xcconfig
+
+# Xcode workspace data (auto-generated)
+*.xcworkspace/contents.xcworkspacedata
+
+# Ruby version management
+.ruby-version
