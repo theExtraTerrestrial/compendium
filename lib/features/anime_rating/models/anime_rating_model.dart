@@ -1,4 +1,5 @@
 import 'package:compendium/core/models/anime_model.dart';
+import 'package:flutter/material.dart';
 
 class AnimeRatingModel extends AnimeModel {
   final int rating;
@@ -33,6 +34,28 @@ class AnimeRatingModel extends AnimeModel {
       score: score,
       color: color,
       rating: json['rating'] ?? 0,
+    );
+  }
+
+  AnimeRatingModel copyWith({
+    int? id,
+    String? title,
+    String? coverImageUrl,
+    String? bannerImageUrl,
+    List<String>? genres,
+    int? score,
+    Color? color,
+    int? rating,
+  }) {
+    return AnimeRatingModel(
+      id: id ?? this.id,
+      title: title ?? this.title,
+      coverImageUrl: coverImageUrl ?? this.coverImageUrl,
+      bannerImageUrl: bannerImageUrl ?? this.bannerImageUrl,
+      genres: genres ?? this.genres,
+      score: score ?? this.score,
+      color: color ?? this.color,
+      rating: rating ?? this.rating,
     );
   }
 }

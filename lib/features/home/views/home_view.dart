@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:compendium/features/home/viewmodels/home_viewmodel.dart';
 import 'package:compendium/features/home/models/project_model.dart';
+import 'package:compendium/features/home/models/project_status.dart';
 import 'package:compendium/features/home/services/navigation_service.dart';
 
 class HomeView extends StatelessWidget {
@@ -177,9 +178,7 @@ class HomeView extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: project.status == ProjectStatus.locked
-            ? null
-            : () {
+        onPressed: () {
           // Navigate to the actual project or project detail view
           NavigationService.navigateToProjectDetail(context, project.id);
         },

@@ -8,6 +8,7 @@ class StarRating extends StatefulWidget {
   final IconData filledIcon;
   final IconData outlinedIcon;
   final MaterialColor color;
+  final ValueChanged<int>? onRatingChanged;
 
   const StarRating({
     required this.rating,
@@ -16,6 +17,7 @@ class StarRating extends StatefulWidget {
     this.color = Colors.amber,
     this.filledIcon = Icons.star,
     this.outlinedIcon = Icons.star_border,
+    this.onRatingChanged,
     super.key
   });
 
@@ -39,6 +41,8 @@ class _StarRatingState extends State<StarRating> {
       setState(() {
         _rating = newRating;
       });
+      // notify parent if callback provided
+      widget.onRatingChanged?.call(_rating);
     }
 
     return Row(

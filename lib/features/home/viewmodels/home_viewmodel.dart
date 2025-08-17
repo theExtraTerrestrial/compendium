@@ -1,6 +1,9 @@
 import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:compendium/features/home/models/project_model.dart';
+import 'package:compendium/features/home/models/project_status.dart';
+import 'package:compendium/features/feature_registry.dart' as registry;
+import 'package:compendium/features/feature_config.dart';
 
 class HomeViewModel extends ChangeNotifier {
   List<ProjectModel> _projects = [];
@@ -22,18 +25,8 @@ class HomeViewModel extends ChangeNotifier {
     notifyListeners();
 
     try {
-      _projects = [
-        ProjectModel(id: '1', title: 'Static Anime Collection Display', status: ProjectStatus.completed, coverImagePath: 'assets/images/anime_collection.png', description: 'Display 20 hardcoded anime entries in a responsive grid layout\nEach card must show: title, cover image, genre, rating (1-10)\nImplement smooth scrolling with proper spacing\nCreate custom app bar with "My Anime Collection" title\nApply consistent card styling (rounded corners, shadows)\nEnsure responsive design for multiple screen sizes'),
-        ProjectModel(id: '2', title: 'Anime Rating System', status: ProjectStatus.inProgress, description: 'List of 15 pre-loaded anime titles for rating\nInteractive 1-5 star rating system per anime\nPersistent storage using SharedPreferences\nDisplay average rating across all rated anime\nVisual differentiation between rated/unrated entries\n"Reset All Ratings" functionality with confirmation dialog\nReal-time rating updates without app restart\n'),
-        ProjectModel(id: '3', title: 'Daily Anime Quote Generator', status: ProjectStatus.locked),
-        ProjectModel(id: '4', title: 'Movie Watchlist Manager', status: ProjectStatus.locked),
-        ProjectModel(id: '5', title: 'TV Show Episode Tracker', status: ProjectStatus.locked),
-        ProjectModel(id: '6', title: 'Random Movie Night Picker', status: ProjectStatus.locked),
-        ProjectModel(id: '7', title: 'Manga Discovery Engine', status: ProjectStatus.locked),
-        ProjectModel(id: '8', title: 'Game Discovery Platform', status: ProjectStatus.locked),
-        ProjectModel(id: '9', title: 'Social Book Club Manager', status: ProjectStatus.locked),
-        ProjectModel(id: '10', title: 'Anime Character Encyclopedia', status: ProjectStatus.locked)
-      ];
+      // Build projects list from the central feature registry.
+      _projects = registry.featureRegistry.map(_projectFromFeature).toList();
       _errorMessage = null;
     } catch (e) {
       _errorMessage = 'Failed to load projects: $e';
@@ -41,6 +34,21 @@ class HomeViewModel extends ChangeNotifier {
       _isLoading = false;
       notifyListeners();
     }
+  }
+
+  ProjectModel _projectFromFeature(FeatureConfig f) {
+    final metadata = f.metadata;
+    final status = metadata?.status ?? ProjectStatus.locked;
+
+    final title = metadata?.title ?? f.name.replaceAll('_', ' ').split(' ').map((s) => s.isEmpty ? s : '${s[0].toUpperCase()}${s.substring(1)}').join(' ');
+
+    return ProjectModel(
+      id: f.id,
+      title: title,
+      status: status,
+      coverImagePath: metadata?.coverImagePath,
+      description: metadata?.description,
+    );
   }
 
   void addProject(ProjectModel project) {

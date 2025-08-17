@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-enum ProjectStatus { locked, inProgress, completed }
+import 'package:compendium/features/home/models/project_status.dart';
 
 class ProjectModel {
   final String id;

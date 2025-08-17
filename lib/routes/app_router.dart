@@ -1,63 +1,30 @@
-import 'package:compendium/features/anime_rating/viewmodels/anime_ratings_viewmodel.dart';
-import 'package:compendium/features/anime_rating/views/anime_ratings_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
 import 'package:compendium/features/home/views/home_view.dart';
 import 'package:compendium/features/home/views/project_detail_view.dart';
-import 'package:compendium/features/anime_collection/views/anime_collection_view.dart';
-import 'package:compendium/features/anime_collection/viewmodels/anime_collection_viewmodel.dart';
-import 'package:compendium/routes/feature_config.dart';
+import 'package:compendium/features/feature_registry.dart' as registry;
+import 'package:compendium/features/feature_config.dart';
 
+/// Feature registration list sourced from `feature_registry.dart` so both
+/// the router and UI can share the same single source of truth.
+final List<FeatureConfig> _features = List.unmodifiable(registry.featureRegistry);
 
-/// Main application router
-/// All routes are defined here for simplicity and performance
-final GoRouter appRouter = GoRouter(
-  initialLocation: '/home',
-  routes: [
-    // ==========================================
-    // HOME FEATURE ROUTES
-    // Main dashboard and project detail views
-    // ==========================================
-    GoRoute(
-      path: '/home',
-      name: 'home',
-      builder: (context, state) => const HomeView(),
-      routes: _featureRoutes,
-    )
-  ],
-
-  // Global error handling
-  errorBuilder: (context, state) => _errorPageBuilder(context, state),
-);
-
-final List<FeatureConfig> _features = [
-  FeatureConfig(
-    id: '1',
-    name: 'anime_collection',
-    path: 'anime-collection',
-    builder: (context, state) {
-      return ChangeNotifierProvider<AnimeCollectionViewModel>(
-        create: (_) => AnimeCollectionViewModel(),
-        child: const AnimeCollectionView(),
-      );
-    },
-  ),
-
-  FeatureConfig(
-    id: '2',
-    name: 'anime_ratings',
-    path: 'anime-ratings',
-    builder: (context, state) {
-      return ChangeNotifierProvider<AnimeRatingsViewModel>(
-        create: (_) => AnimeRatingsViewModel(),
-        child: const AnimeRatingsView(),
-      );
-    },
-  )
-];
+/// Validate the feature list at startup to catch duplicate names/paths early.
+void _validateFeatures(List<FeatureConfig> features) {
+  final names = <String>{};
+  final paths = <String>{};
+  for (final f in features) {
+    if (!names.add(f.name)) {
+      throw StateError('Duplicate feature route name: ${f.name}');
+    }
+    if (!paths.add(f.path)) {
+      throw StateError('Duplicate feature path: ${f.path}');
+    }
+  }
+}
 
 final List<GoRoute> _featureRoutes = [
+  // Generic project routes for all features
   GoRoute(
     path: 'project/:id',
     name: 'project_detail',
@@ -77,8 +44,35 @@ final List<GoRoute> _featureRoutes = [
     ]
   ),
 
+  // Personalized routes built based on feature configurations
   ..._buildFeatureRoutes(),
 ];
+
+/// Main application router
+/// All routes are defined here for simplicity and performance
+final GoRouter appRouter = _buildAppRouter();
+
+GoRouter _buildAppRouter() {
+  _validateFeatures(_features);
+  return GoRouter(
+    initialLocation: '/home',
+    routes: [
+      // ==========================================
+      // HOME FEATURE ROUTES
+      // Main dashboard and project detail views
+      // ==========================================
+      GoRoute(
+        path: '/home',
+        name: 'home',
+        builder: (context, state) => const HomeView(),
+        routes: _featureRoutes,
+      )
+    ],
+
+    // Global error handling
+    errorBuilder: (context, state) => _errorPageBuilder(context, state),
+  );
+}
 
 List<GoRoute> _buildFeatureRoutes() {
   return _features.map((feature) {
