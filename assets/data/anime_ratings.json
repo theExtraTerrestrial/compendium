@@ -1,0 +1,416 @@
+{
+    "data": {
+        "MediaListCollection": {
+            "lists": [
+                {
+                    "name": "Planning",
+                    "entries": [
+                        {
+                            "media": {
+                                "id": 8074,
+                                "title": {
+                                    "english": "High School of the Dead"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx8074-YB63Ik96fjPj.png",
+                                    "color": "#e4a150"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/8074-g8bVkL09nkdw.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Ecchi",
+                                    "Horror",
+                                    "Romance",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 66
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 11061,
+                                "title": {
+                                    "english": "Hunter x Hunter (2011)"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11061-y5gsT1hoHuHw.png",
+                                    "color": "#f1d65d"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11061-8WkkTZ6duKpq.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Fantasy"
+                                ],
+                                "meanScore": 89
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 97922,
+                                "title": {
+                                    "english": "INUYASHIKI LAST HERO"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97922-qrGn5fkQinDs.jpg",
+                                    "color": "#e49335"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/97922-j6ba0Zmq8xOa.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Psychological",
+                                    "Sci-Fi"
+                                ],
+                                "meanScore": 74
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 13331,
+                                "title": {
+                                    "english": "Jormungand: Perfect Order"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13331-YNyNmU1CfNK7.png",
+                                    "color": "#e4ae50"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n13331-rimbFLzJIJ3J.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure"
+                                ],
+                                "meanScore": 77
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 141351,
+                                "title": {
+                                    "english": "Kakegurui Twin"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx141351-47JtghppCwMu.png",
+                                    "color": "#2828fe"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/141351-PyKKjZJJ5gVC.jpg",
+                                "genres": [
+                                    "Drama",
+                                    "Mystery",
+                                    "Psychological"
+                                ],
+                                "meanScore": 71
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 1530,
+                                "title": {
+                                    "english": "Kanon (2006)"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1530-nkzstlVZhZNG.jpg",
+                                    "color": "#e4a15d"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1530-xl96EB4lBzGL.jpg",
+                                "genres": [
+                                    "Drama",
+                                    "Romance",
+                                    "Slice of Life",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 76
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 6594,
+                                "title": {
+                                    "english": "Katanagatari"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6594-xrrFyCacxUle.png",
+                                    "color": "#e46b43"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/6594-lROEMKEwCESY.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Romance"
+                                ],
+                                "meanScore": 82
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 20727,
+                                "title": {
+                                    "english": "Blood Blockade Battlefront"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20727-jgVnxLCHAKqZ.jpg",
+                                    "color": "#1ac9f1"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20727-jcGXKLo3lLDP.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Comedy",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 74
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 1606,
+                                "title": {
+                                    "english": "Kekkaishi"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1606-EquPRtK0dYxv.png",
+                                    "color": null
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1606-kJJtlCLkeBBP.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Comedy",
+                                    "Romance",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 73
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 21519,
+                                "title": {
+                                    "english": "Your Name."
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21519-SUo3ZQuCbYhJ.png",
+                                    "color": "#0da1e4"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21519-1ayMXgNlmByb.jpg",
+                                "genres": [
+                                    "Drama",
+                                    "Romance",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 85
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 136804,
+                                "title": {
+                                    "english": "KONOSUBA -God's blessing on this wonderful world! 3"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx136804-7FVftG67FPBc.jpg",
+                                    "color": "#3586e4"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/136804-yHC8D64UTiRA.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Comedy",
+                                    "Ecchi",
+                                    "Fantasy"
+                                ],
+                                "meanScore": 82
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 801,
+                                "title": {
+                                    "english": "Ghost in the Shell: Stand Alone Complex 2nd GIG"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx801-nF9RyvPJu6s4.jpg",
+                                    "color": null
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/801-EtANUNZWAhbH.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Sci-Fi"
+                                ],
+                                "meanScore": 84
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 21196,
+                                "title": {
+                                    "english": "Kabaneri of the Iron Fortress"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21196-2PfPfIDrxKki.jpg",
+                                    "color": "#e48650"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21196-0aQqkn5XWmGo.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Fantasy",
+                                    "Horror",
+                                    "Supernatural"
+                                ],
+                                "meanScore": 70
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 21858,
+                                "title": {
+                                    "english": "Little Witch Academia (TV)"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21858-huBrbIOGMYXv.jpg",
+                                    "color": "#f186c9"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21858-eyzQxmTRxtYO.jpg",
+                                "genres": [
+                                    "Comedy",
+                                    "Fantasy"
+                                ],
+                                "meanScore": 77
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 17265,
+                                "title": {
+                                    "english": "Log Horizon"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx17265-RyErURYesjJt.jpg",
+                                    "color": "#50aee4"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/17265-53eBCC34SKyM.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Fantasy"
+                                ],
+                                "meanScore": 76
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 100643,
+                                "title": {
+                                    "english": "Made in Abyss: Dawn of the Deep Soul"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100643-fPH9OgEKKvcI.jpg",
+                                    "color": "#e49343"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/100643-9cSyQS0R5u0o.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Drama",
+                                    "Fantasy",
+                                    "Horror",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Sci-Fi"
+                                ],
+                                "meanScore": 85
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 9756,
+                                "title": {
+                                    "english": "Puella Magi Madoka Magica"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9756-QnUGwlwwnsuN.jpg",
+                                    "color": "#f1c95d"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/9756-d5M8NffgJJHB.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Drama",
+                                    "Fantasy",
+                                    "Mahou Shoujo",
+                                    "Psychological",
+                                    "Thriller"
+                                ],
+                                "meanScore": 83
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 164,
+                                "title": {
+                                    "english": "Princess Mononoke"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx164-ySuGzCWVw2cL.jpg",
+                                    "color": null
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/164-Aj6MINy7VTfs.jpg",
+                                "genres": [
+                                    "Action",
+                                    "Adventure",
+                                    "Drama",
+                                    "Fantasy"
+                                ],
+                                "meanScore": 85
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 19,
+                                "title": {
+                                    "english": "Monster"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19-gtMC64182sm4.jpg",
+                                    "color": null
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/19-kJhwsB0Z97tL.jpg",
+                                "genres": [
+                                    "Drama",
+                                    "Horror",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Thriller"
+                                ],
+                                "meanScore": 88
+                            }
+                        },
+                        {
+                            "media": {
+                                "id": 323,
+                                "title": {
+                                    "english": "Paranoia Agent"
+                                },
+                                "coverImage": {
+                                    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx323-ZGkUcJOn4ngy.png",
+                                    "color": "#f1bb28"
+                                },
+                                "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/323-tQCOVrhiRgeU.jpg",
+                                "genres": [
+                                    "Drama",
+                                    "Mystery",
+                                    "Psychological",
+                                    "Supernatural",
+                                    "Thriller"
+                                ],
+                                "meanScore": 76
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

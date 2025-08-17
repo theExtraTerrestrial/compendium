@@ -1,4 +1,4 @@
-import 'package:compendium/features/anime_collection/models/anime_model.dart';
+import 'package:compendium/core/models/anime_model.dart';
 import 'package:compendium/features/anime_collection/viewmodels/anime_collection_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

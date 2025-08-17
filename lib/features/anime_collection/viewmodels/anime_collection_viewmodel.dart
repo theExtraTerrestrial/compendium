@@ -1,16 +1,14 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:compendium/features/anime_collection/models/anime_model.dart';
+import 'package:compendium/core/models/anime_model.dart';
 import 'package:compendium/core/viewmodels/base_viewmodel.dart';
 
 /// Manages anime collection state and business logic
 class AnimeCollectionViewModel extends BaseViewModel {
   List<AnimeModel> _animeCollection = [];
-  AnimeModel? _selectedAnime;
 
   // Public immutable getters
   List<AnimeModel> get animeCollection => List.unmodifiable(_animeCollection);
-  AnimeModel? get selectedAnime => _selectedAnime;
   int get animeCount => _animeCollection.length;
   bool get hasAnime => _animeCollection.isNotEmpty;
 
@@ -89,71 +87,6 @@ class AnimeCollectionViewModel extends BaseViewModel {
       }
     } catch (e) {
       setError('Failed to load anime collection: $e');
-    }
-  }
-
-  // ==========================================
-  // BUSINESS LOGIC METHODS
-  // ==========================================
-
-  /// Add a new anime to the collection
-  void addAnime(AnimeModel anime) {
-    try {
-      if (_animeCollection.any((existing) => existing.id == anime.id)) {
-        setError('Anime already exists in collection');
-        return;
-      }
-
-      _animeCollection.add(anime);
-      clearError();
-      notifyListeners();
-    } catch (e) {
-      setError('Failed to add anime: $e');
-    }
-  }
-
-  /// Remove an anime from the collection
-  void removeAnime(int animeId) {
-    try {
-      final initialLength = _animeCollection.length;
-      _animeCollection.removeWhere((anime) => anime.id == animeId);
-
-      if (_animeCollection.length < initialLength) {
-        // Clear selection if removed anime was selected
-        if (_selectedAnime?.id == animeId) {
-          _selectedAnime = null;
-        }
-        clearError();
-        notifyListeners();
-      } else {
-        setError('Anime not found in collection');
-      }
-    } catch (e) {
-      setError('Failed to remove anime: $e');
-    }
-  }
-
-  /// Select an anime
-  void selectAnime(int animeId) {
-    try {
-      final anime = _animeCollection.firstWhere(
-        (anime) => anime.id == animeId,
-        orElse: () => throw Exception('Anime not found'),
-      );
-
-      _selectedAnime = anime;
-      clearError();
-      notifyListeners();
-    } catch (e) {
-      setError('Failed to select anime: $e');
-    }
-  }
-
-  /// Clear the selected anime
-  void clearSelection() {
-    if (_selectedAnime != null) {
-      _selectedAnime = null;
-      notifyListeners();
     }
   }
 

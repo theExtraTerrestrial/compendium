@@ -13,11 +13,6 @@ class NavigationService {
     context.goNamed('project_start', pathParameters: {'id': projectId});
   }
 
-  // Navigation to specific project features
-  static void navigateToAnimeCollection(BuildContext context) {
-    context.goNamed('anime_collection');
-  }
-
   // Navigation back to home
   static void navigateToHome(BuildContext context) {
     context.go('/home');

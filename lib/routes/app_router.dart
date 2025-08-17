@@ -1,3 +1,5 @@
+import 'package:compendium/features/anime_rating/viewmodels/anime_ratings_viewmodel.dart';
+import 'package:compendium/features/anime_rating/views/anime_ratings_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
@@ -5,6 +7,8 @@ import 'package:compendium/features/home/views/home_view.dart';
 import 'package:compendium/features/home/views/project_detail_view.dart';
 import 'package:compendium/features/anime_collection/views/anime_collection_view.dart';
 import 'package:compendium/features/anime_collection/viewmodels/anime_collection_viewmodel.dart';
+import 'package:compendium/routes/feature_config.dart';
+
 
 /// Main application router
 /// All routes are defined here for simplicity and performance
@@ -19,13 +23,39 @@ final GoRouter appRouter = GoRouter(
       path: '/home',
       name: 'home',
       builder: (context, state) => const HomeView(),
-      routes: _featureRoutes
+      routes: _featureRoutes,
     )
   ],
 
   // Global error handling
   errorBuilder: (context, state) => _errorPageBuilder(context, state),
 );
+
+final List<FeatureConfig> _features = [
+  FeatureConfig(
+    id: '1',
+    name: 'anime_collection',
+    path: 'anime-collection',
+    builder: (context, state) {
+      return ChangeNotifierProvider<AnimeCollectionViewModel>(
+        create: (_) => AnimeCollectionViewModel(),
+        child: const AnimeCollectionView(),
+      );
+    },
+  ),
+
+  FeatureConfig(
+    id: '2',
+    name: 'anime_ratings',
+    path: 'anime-ratings',
+    builder: (context, state) {
+      return ChangeNotifierProvider<AnimeRatingsViewModel>(
+        create: (_) => AnimeRatingsViewModel(),
+        child: const AnimeRatingsView(),
+      );
+    },
+  )
+];
 
 final List<GoRoute> _featureRoutes = [
   GoRoute(
@@ -47,65 +77,36 @@ final List<GoRoute> _featureRoutes = [
     ]
   ),
 
-  // ==========================================
-  // ANIME COLLECTION FEATURE ROUTES
-  // Collection management with nested routes
-  // ==========================================
-  GoRoute(
-    path: 'anime-collection',
-    name: 'anime_collection',
-    builder: (context, state) => ChangeNotifierProvider(
-      create: (context) => AnimeCollectionViewModel(),
-      child: const AnimeCollectionView(),
-    )
-  ),
-
-  // ==========================================
-  // FUTURE FEATURE ROUTES
-  // Add new features here as they are implemented
-  // ==========================================
-
-  // TODO: Anime Rating Feature
-  // GoRoute(path: '/anime-rating', name: 'anime_rating', ...)
-
-  // TODO: Quote Generator Feature
-  // GoRoute(path: '/quote-generator', name: 'quote_generator', ...)
-
-  // TODO: Movie Watchlist Feature
-  // GoRoute(path: '/movie-watchlist', name: 'movie_watchlist', ...)
-
-  // TODO: TV Tracker Feature
-  // GoRoute(path: '/tv-tracker', name: 'tv_tracker', ...)
-
-  // TODO: Movie Night Picker Feature
-  // GoRoute(path: '/movie-night-picker', name: 'movie_night_picker', ...)
-
-  // TODO: Manga Discovery Feature
-  // GoRoute(path: '/manga-discovery', name: 'manga_discovery', ...)
-
-  // TODO: Game Discovery Feature
-  // GoRoute(path: '/game-discovery', name: 'game_discovery', ...)
-
-  // TODO: Book Club Feature
-  // GoRoute(path: '/book-club', name: 'book_club', ...)
-
-  // TODO: Character Encyclopedia Feature
-  // GoRoute(path: '/character-encyclopedia', name: 'character_encyclopedia', ...)
-
+  ..._buildFeatureRoutes(),
 ];
 
+List<GoRoute> _buildFeatureRoutes() {
+  return _features.map((feature) {
+    return GoRoute(
+      path: feature.path,
+      name: feature.name,
+      builder: feature.builder,
+      routes: feature.routes,
+    );
+  }).toList();
+}
+
 Widget _findProjectById(BuildContext context, String id) {
-  switch (id) {
-    case '1':
-      return ChangeNotifierProvider(
-        create: (context) => AnimeCollectionViewModel(),
-        child: const AnimeCollectionView(),
-      );
-    default:
-      return Scaffold(
-        appBar: AppBar(title: const Text('Project Not Found')),
-        body: const Center(child: Text('Project not found')),
-      );
+  try {
+    FeatureConfig feature = _features.firstWhere(
+      (f) => f.id == id,
+    );
+
+    // Get current state from context if available
+    final currentState = GoRouterState.of(context);
+
+    return feature.builder(context, currentState);
+  } catch (e) {
+    // Feature not found, return empty scaffold
+    return Scaffold(
+      appBar: AppBar(title: const Text('Project Not Found')),
+      body: const Center(child: Text('Project not found')),
+    );
   }
 }
 
