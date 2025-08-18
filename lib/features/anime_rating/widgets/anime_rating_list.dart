@@ -47,6 +47,7 @@ class AnimeRatingList extends StatelessWidget {
               final anime = items[index];
               final isSaving = savingIds.contains(anime.id);
               return ListTile(
+                tileColor: anime.rating > 0 ? Colors.indigo[50] : null,
                 leading: CircleAvatar(backgroundImage: NetworkImage(anime.coverImageUrl)),
                 title: Text(anime.title),
                 subtitle: StarRating(

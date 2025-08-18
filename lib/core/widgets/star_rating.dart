@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-class StarRating extends StatefulWidget {
-
-  final int rating;
+class StarRating extends StatelessWidget {
+  final int rating; // 0..itemCount
   final int itemCount;
   final int itemSize;
   final IconData filledIcon;
@@ -18,49 +17,38 @@ class StarRating extends StatefulWidget {
     this.filledIcon = Icons.star,
     this.outlinedIcon = Icons.star_border,
     this.onRatingChanged,
-    super.key
+    super.key,
   });
 
-
-  @override
-  State<StarRating> createState() => _StarRatingState();
-}
-
-class _StarRatingState extends State<StarRating> {
-  late int _rating;
-
-  @override
-  void initState() {
-    super.initState();
-    _rating = widget.rating;
-  }
+  int _clamp(int value) => value.clamp(0, itemCount);
 
   @override
   Widget build(BuildContext context) {
-    void setRating(int newRating) {
-      setState(() {
-        _rating = newRating;
-      });
-      // notify parent if callback provided
-      widget.onRatingChanged?.call(_rating);
-    }
+    final clamped = _clamp(rating);
 
     return Row(
       mainAxisSize: MainAxisSize.min,
-      children: List.generate(widget.itemCount, (index) {
-        return GestureDetector(
-          onTap: () {
-            _rating == index + 1
-                ? setRating(0)
-                : setRating(index + 1);
-          },
-          child: Icon(
-            index < _rating ? widget.filledIcon : widget.outlinedIcon,
-            size: widget.itemSize.toDouble(),
-            color: widget.color,
+      children: [
+        for (var i = 0; i < itemCount; i++)
+          GestureDetector(
+            onTap: onRatingChanged == null
+                ? null
+                : () {
+                    final newRating = (clamped == i + 1) ? 0 : i + 1;
+                    onRatingChanged!(newRating);
+                  },
+            child: Icon(
+              i < clamped ? filledIcon : outlinedIcon,
+              size: itemSize.toDouble(),
+              color: color,
+            ),
           ),
-        );
-      }),
+        const SizedBox(width: 6),
+        Text(
+          ' ($clamped/$itemCount)',
+          style: TextStyle(fontSize: itemSize * 0.8),
+        ),
+      ],
     );
   }
 }

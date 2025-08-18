@@ -9,7 +9,8 @@ final FeatureConfig animeRatingsFeature = FeatureConfig(
   builder: (context, state) => const AnimeRatingsView(),
   metadata: const FeatureMetadata(
     title: 'Anime Rating System',
-    status: ProjectStatus.inProgress,
+    status: ProjectStatus.completed,
+    coverImagePath: 'assets/images/anime_rating.png',
     description: 'List of 15 pre-loaded anime titles for rating\nInteractive 1-5 star rating system per anime\nPersistent storage using SharedPreferences\nDisplay average rating across all rated anime\nVisual differentiation between rated/unrated entries\n"Reset All Ratings" functionality with confirmation dialog\nReal-time rating updates without app restart',
   ),
 );
